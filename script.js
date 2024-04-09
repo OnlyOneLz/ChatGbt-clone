@@ -11,6 +11,7 @@ const app = () => {
   let messageHistory = localStorage.getItem("history") ? JSON.parse(localStorage.getItem("history")) : []
   console.log(messageHistory)
 
+  console.log(process.env.APIURL, process.env.APIKEY);
 
   // Functions
   const updateMessageHistory = (data, role) => {
