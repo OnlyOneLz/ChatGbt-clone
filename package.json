@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "http-server -p 3000"
+  },
   "devDependencies": {
     "dotenv-webpack": "^8.1.0"
   }
