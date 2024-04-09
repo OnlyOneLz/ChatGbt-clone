@@ -1,4 +1,3 @@
-import config from '../config.js'
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 const app = () => {
@@ -65,11 +64,11 @@ const app = () => {
 
   const apiFetch = async () => {
     try {
-      const response = await fetch(config.apiUrl, {
+      const response = await fetch(process.env.APIURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${config.apiKey}`
+          "Authorization": `Bearer ${process.env.API_KEY}`
         },
         body: JSON.stringify({
           model: 'gpt-3.5-turbo',
